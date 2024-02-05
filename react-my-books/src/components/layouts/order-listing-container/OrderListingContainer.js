@@ -1,7 +1,7 @@
 import React from "react";
 import "./orderListingContainer.styles.css";
-import OrderImg from "../../../assets/books-img/harrypoter.jpg";
 import { useSelector } from "react-redux";
+import { apiUrl } from "../../../constants/Constants"
 
 const OrderListingContainer = () => {
     const my_orders = useSelector((state) => state.user.my_orders);
@@ -16,16 +16,16 @@ const OrderListingContainer = () => {
                         {order?.order_items?.map((item) => (
                             <div className="order-item">
                                 <div className="order-item-img-container">
-                                    <img
-                                        src={OrderImg}
+                                    {/* <img
+                                        src={}
                                         alt="order-item-img"
                                         className="order-item-img"
-                                    />
+                                    /> */}
                                 </div>
                                 <div className="order-item-content-container">
                                     <h2>{item?.book?.name}</h2>
-                                    <p>Auhtor Name</p>
-                                    <h3 className="order-item-price">Price</h3>
+                                    <p>{item?.book?.author}</p>
+                                    <h3 className="order-item-price">{item?.book?.price} </h3>
                                 </div>
                             </div>
                         ))}

@@ -39,14 +39,22 @@ const Navbar = ({ darkTheme, darkText }) => {
                         }`}
                     >
                         Books
-                        <Link
-                            to="/cart"
-                            className={`${
-                                darkText ? "nav-links-dark" : "nav-links"
-                            }`}
-                        >
-                            Cart
-                        </Link>{" "}
+                    </Link>
+                    <Link
+                        to="/cart"
+                        className={`${
+                            darkText ? "nav-links-dark" : "nav-links"
+                        }`}
+                    >
+                        Cart
+                    </Link>
+                    <Link
+                        to="/order-listing"
+                        className={`${
+                            darkText ? "nav-links-dark" : "nav-links"
+                        }`}
+                    >
+                        My Orders
                     </Link>
 
                     {user && user?.success ? (
