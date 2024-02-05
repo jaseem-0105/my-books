@@ -42,20 +42,6 @@
                     </a>
                 </li>
             </ul>
-            <ul class="navbar-nav" id="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="/admin/view-order-items">
-                        <i class="ri-honour-line"></i> <span>@lang('Order Items')</span>
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav" id="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="/admin/view-queries">
-                        <i class="ri-honour-line"></i> <span>@lang('Queries')</span>
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
     <div class="sidebar-background"></div>
