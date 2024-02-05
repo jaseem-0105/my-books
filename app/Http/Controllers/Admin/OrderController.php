@@ -14,13 +14,16 @@ class OrderController extends Controller
             $orders = Order::get();
             return DataTables::of($orders)
                 ->addIndexColumn()
+                ->addColumn('name', function ($row) {
+                    return $row->user->name; // Assuming your User model has a 'name' attribute
+                })
                 ->addColumn('action', function ($row) {
                     $btn = '<a class="text-white btn btn-success" data-id=' . $row->id . '">View</a>';
                     return $btn;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action','name'])
                 ->toJson();
         }
-        return view('admin.orders.index'); 
+        return view('admin.orders.index');
     }
 }

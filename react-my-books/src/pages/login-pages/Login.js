@@ -23,7 +23,7 @@ const Login = () => {
 
         if (!email) {
             isValid = false;
-            errors.email = "User ID is required";
+            errors.email = "Email is required";
         }
         // Add more validation logic here as needed
 

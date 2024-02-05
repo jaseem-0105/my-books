@@ -26,6 +26,7 @@ Route::post('/store-queries', [MyBookApiController::class, 'storeQueries']);
 
 
 Route::post('customer-login', [MyBookApiController::class, 'login']);
+Route::post('customer-register', [MyBookApiController::class, 'register']);
 Route::group(['middleware' => ['jwt.auth']], function () {
 
     Route::post('place-order', [MyBookApiController::class, 'placeOrder']);

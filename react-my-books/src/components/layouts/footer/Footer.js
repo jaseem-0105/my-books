@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './footer.styles.css';
 import Axios from '../../../Axios'
-import {baseUrl} from '../../../constants/Constants'
+import {apiUrl, baseUrl} from '../../../constants/Constants'
 
 const Footer = () => {
     const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const Footer = () => {
         e.preventDefault();
 
         try {
-            await Axios.post(`${baseUrl}/store-queries`, formData);
+            await Axios.post(`${apiUrl}store-queries`, formData);
             console.log('Query submitted successfully!');
             setFormData({
                 name: '',

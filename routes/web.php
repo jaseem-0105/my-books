@@ -26,7 +26,7 @@ Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard')
 Route::prefix('admin')->group(function () {
     Route::resource('books', BookController::class);
     Route::get('/view-orders',[OrderController::class,'viewOrders']);
-    Route::get('/view-order-items',[OrderItemsController::class,'viewOrderItems']);
+    Route::get('view-order-items/{id}',[OrderController::class,'viewOrderItems']);
     Route::get('/view-queries',[QueryController::class,'viewQueries']);
 
 });

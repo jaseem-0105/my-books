@@ -43,10 +43,10 @@ export const myOrders = createAsyncThunk(
   );
 export const register = createAsyncThunk(
   "auth/register",
-  async ({ name, email, password, thunkAPI }) => {
+  async ({  email, password,name, thunkAPI }) => {
     try {
       const response = await axios.post(REGISTER_URL, {
-        name, email, password
+         email, password,name
       });
       return response.data;
     } catch (err) {

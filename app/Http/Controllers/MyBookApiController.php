@@ -43,7 +43,7 @@ class MyBookApiController extends Controller
 
     public function myOrders()
     {
-        $orders = Order::where('user_id',auth()->user()->id)->with('orderItems')->get();
+        $orders = Order::where('user_id',auth()->user()->id)->with('orderItems.book')->get();
         $response = ["success" => true, "data" => $orders];
         return response()->json($response);
     }
@@ -73,7 +73,18 @@ class MyBookApiController extends Controller
         $user = new User($payload);
         if ($user->save()) {
 
-            $response = ['success' => true, 'data' => $user];
+            $token = self::getToken($user);
+            $user->auth_token = $token;
+            $user->save();
+            $response = [
+                'success' => true,
+                'user' => [
+                    'id' => $user->id,
+                    'auth_token' => $user->auth_token,
+                    'email' => $user->email,
+                ],
+            ];
+
         } else {
 
             $response = ['success' => false, 'data' => 'User creation failed'];
@@ -110,11 +121,14 @@ class MyBookApiController extends Controller
     // }
     public function storeQueries(Request $request)
     {
+
         $query = new Query();
+
         $query->name = $request->name;
         $query->email = $request->email;
         $query->query = $request->query;
         $query->save();
+        return response()->json('cvdfv', 201);
     }
 
 

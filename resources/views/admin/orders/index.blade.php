@@ -22,8 +22,7 @@
                         <thead>
                             <tr>
                                 <th style="width:22px;">SN</th>
-                                <th>Customer_Name</th>
-                                <th>Customer_Adress</th>
+                                <th>Name</th>
                                 <th>Total_Amount</th>
                                 <th class="col-2">Actions</th>
                             </tr>
@@ -70,13 +69,10 @@
                         searchable: false
                     },
                     {
-                        data: 'customer_name',
-                        name: 'customer_name',
+                        data: 'name',
+                        name: 'name',
                     },
-                    {
-                        data: 'customer_address',
-                        name: 'customer_address',
-                    },
+
                     {
                         data: 'total_amount',
                         name: 'total_amount',

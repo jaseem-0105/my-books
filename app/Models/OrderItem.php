@@ -14,6 +14,8 @@ class OrderItem extends Model
         return $this->belongsTo(Book::class, 'item_id');
     }
 
+
+
     // Define the relationship with Order model
     public function order()
     {
