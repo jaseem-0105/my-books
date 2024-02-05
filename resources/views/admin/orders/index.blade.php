@@ -23,8 +23,9 @@
                             <tr>
                                 <th style="width:22px;">SN</th>
                                 <th>Name</th>
+                                <th>Item Names</th>
                                 <th>Total_Amount</th>
-                                <th class="col-2">Actions</th>
+
                             </tr>
                         </thead>
                     </table>
@@ -72,18 +73,16 @@
                         data: 'name',
                         name: 'name',
                     },
-
+                    {
+                        data: 'item',
+                        name: 'item',
+                    },
                     {
                         data: 'total_amount',
                         name: 'total_amount',
                     },
 
-                    {
-                        data: 'action',
-                        name: 'action',
-                        orderable: false,
-                        searchable: false
-                    },
+
                 ],
 
             });

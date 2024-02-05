@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Order;
+use App\Models\OrderItem;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -17,11 +18,16 @@ class OrderController extends Controller
                 ->addColumn('name', function ($row) {
                     return $row->user->name; // Assuming your User model has a 'name' attribute
                 })
-                ->addColumn('action', function ($row) {
-                    $btn = '<a class="text-white btn btn-success" data-id=' . $row->id . '">View</a>';
-                    return $btn;
+                ->addColumn('item',function ($row){
+                    $name = '';
+                    $orderItems = OrderItem::where('order_id', $row->id)->get();
+                    foreach ($orderItems as $key => $orderItem) {
+                        $name .= $orderItem->book->name .', ';
+                    }
+                    return $name;
                 })
-                ->rawColumns(['action','name'])
+
+                ->rawColumns(['name', 'item'])
                 ->toJson();
         }
         return view('admin.orders.index');
