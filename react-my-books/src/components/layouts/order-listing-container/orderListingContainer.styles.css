@@ -1,0 +1,28 @@
+.order-items-container{
+    padding: 5% 0;
+}
+.order-item{
+    display:flex;
+    padding:2rem;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+.order-item-img{
+    width:6rem;
+}
+.order-item-content-container{
+    padding-left: 2rem;
+    padding-top:10px;
+}
+.order-item-content-container p{
+    padding-top: 8px;
+}
+.order-item-price{
+    padding-top: 8px;
+    color:orange;
+}
+
+
+
+
+

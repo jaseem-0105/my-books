@@ -1,0 +1,44 @@
+.footer-container{
+    background-color: #222;
+    padding: 5rem 0;
+}
+
+.footer-container h2{
+   color: #fff;
+}
+.footer-form{
+    padding-top: 3rem;
+    width: 50%;
+}
+.form-label{
+    color: #fff;
+    display: inline-block;
+    padding-bottom:10px ;
+}
+.form-input{
+    width: 100%;
+    padding:0.8rem;
+    font-size: 1rem;
+    border-radius:5px;
+    outline: none;
+}
+.form-submit{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(247, 177, 47);
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    transition: 0.3s ease-in;
+}
+.form-group{
+    padding-bottom: 1.5rem;
+}
+.form-submit:hover{
+    background-color: orange;
+}
+.footer-container p{
+    color: #fff;
+    padding-top: 2rem;
+    font-size: 0.8rem;
+}

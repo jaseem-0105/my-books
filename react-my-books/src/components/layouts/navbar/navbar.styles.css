@@ -1,0 +1,47 @@
+.navbar-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 1rem 0 ;
+}
+.logo{
+font-size: 1.5rem;
+color: #fff;
+text-decoration: none;
+font-family: Chivo Mono;
+font-weight: 700;
+}
+
+.logo span{
+font-size: 1.5rem;
+text-decoration: none;
+font-family: Chivo Mono;
+font-weight: 700;
+}
+
+.nav-links,.nav-links-dark{
+font-size: 1.1rem;
+color: #fff;
+text-decoration: none;
+padding-left: 24px;
+transition: 0.2s ease-in;
+}
+.nav-links-dark{
+    color: #333;
+}
+.nav-links:hover{
+    color:var(--primary-color);
+}
+.nav-links-dark:hover{
+    color:var(--primary-color);
+}
+.background-dark{
+    background-color: #333;
+}
+.background-transparent{
+    background-color: transparent;
+}
+.relative{
+    position: relative !important;
+}
