@@ -22,7 +22,6 @@ const ProductListingAll = () => {
             });
     }, []);
 
-
     const onItemClick = (item) => {
         dispatch(addToCart(item));
     };
@@ -34,8 +33,8 @@ const ProductListingAll = () => {
         <section className="product-listing-all-container">
             <div className="container">
                 <div className="grid-container">
-                    <div className="grid-item">
-                        {books.map((book) => (
+                    {books.map((book) => (
+                        <div className="grid-item">
                             <div key={book.id} className="product-listing-card">
                                 <div className="product-listing-img-container">
                                     <Link to={`/book-details/${book.id}`}>
@@ -74,8 +73,8 @@ const ProductListingAll = () => {
                                     </div>
                                 )}
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>
